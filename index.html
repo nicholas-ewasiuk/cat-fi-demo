@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" media="all" /> -->
+  <link rel="stylesheet" type="text/css" href="/stylesheets/user.css" media="all" />
+  <!-- google fonts -->
+  <!-- poppins: 100 - 900 /w italic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+
+  <!-- fonts awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+
+  <script type="module" src="/javascripts/app.js"></script>
+  <script type="module" src="/javascripts/interact.js"></script>
+
+
+  <title>CF – Demo</title>
+</head>
+
+<body>
+  <nav>
+    <!-- <a href="/"> -->
+    <h3 class="username">
+      Demo
+    </h3>
+    <!-- </a> -->
+    <a href="/">
+      <button class="button-64" id="logout" role="button"><span class="text">
+          Logout
+
+        </span></button></a>
+  </nav>
+  <!-- ^NAV^  -->
+
+  <div class="container">
+
+    <div class="menu" id="menu-slide">
+      <li class="menu-item" id="previous-graphs">
+        <a href="#previous-graphs" class="btn" id="previous-btn">
+          <i class="fas fa-history"></i>
+          Saved
+        </a>
+        <div class="menu-item__sub" id="previous-menu-item__sub">
+          <form action="/users/datasets" method="GET" class="drop-down-form">
+            <select name="drop-down-datasets" id="drop-down-datasets">
+              <option value="" disable select hidden>Previous datasets</option>
+                <option id="options-id">
+                </option>
+            </select>
+            <section>
+              <button type="submit" class="button-64" id="drop-down-button">
+                <span class="text">
+                  Load
+                </span></button>
+              <button type="button" class="button-64" id="delete-previous">
+                <span class="text">
+                  Delete
+                </span></button>
+            </section>
+          </form>
+        </div>
+      </li>
+      <li class="menu-item" id="create">
+        <a href="" class="btn" id="create-btn">
+          <i class="fas fa-plus"></i>
+          Create
+        </a>
+        <div class="create-input-ctrls">
+          <form action="/users" method="POST" class="user-form">
+            <label for="title" id="cntrl-title">
+              Title
+              <span>
+                <input type="text" placeholder="project title" name="dataset-title" id="dataset-title">
+                <i class="fas fa-plus-circle add-revenue"></i>
+              </span>
+            </label>
+            <!-- revenue group -->
+            <label for="revenue" class="revenues">
+              Revenue
+              <aside>
+                <span>
+                  <input type="text" placeholder="source of revenue" id="text-revenue0">
+                  <i class="fas fa-dollar-sign" id="dollar-sign"></i>
+                  <input type="number" placeholder="amount" id="num-revenue0">
+                </span>
+                <span id="add-delete">
+                  <i class="fas fa-plus-circle add-revenue"></i>
+                </span>
+              </aside>
+              <!-- revenue group -->
+            </label>
+            <label for="expense" class="expenses">
+              Expense
+              <aside>
+                <span>
+                  <input type="text" placeholder="source of expense" id="text-expense0" >
+                  <i class="fas fa-dollar-sign" id="dollar-sign"></i>
+                  <input type="number" placeholder="amount" id="num-expense0">
+                </span>
+                <span id="add-delete">
+                  <i class="fas fa-plus-circle add-expense"></i>
+                </span>
+              </aside>
+            </label>
+            <!-- expense group -->
+      <li class="menu-item" id="save">
+        <button class="button-64" id="submit-button" role="button"><span class="text">Save</span></button>
+        <button class="button-64" id="generate-button" role="button"><span class="text">generate</span></button>
+      </li>
+      </form>
+    </div>
+    </li>
+    <li class="menu-item" id="view-all">
+      <a href="" class="btn">
+        <i class="fas fa-search"></i>
+        View All
+      </a>
+    </li>
+  </div>
+  <!-- menu div -->
+  <div class="content">
+    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="100%"
+      width="100%" x="0px" y="0px" id="svg-container" xml:space="preserve">
+      <defs>
+        <linearGradient id="expGradient" gradientTransform="rotate(90)">
+          <stop offset="1%" stop-color="#F06A6E" />
+          <stop offset="100%" stop-color="#F9C3C5" />
+        </linearGradient>
+        <linearGradient id="revGradient" gradientTransform="rotate(90)">
+          <stop offset="0%" stop-color="#65EAD4" />
+          <stop offset="100%" stop-color="#BAEDE3" />
+        </linearGradient>
+      </defs>
+      <g id="circle-svg">
+      </g>
+    </svg>
+  </div>
+
+</body>
+
+</html>

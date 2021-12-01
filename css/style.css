@@ -1,0 +1,213 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+  /* --color-step-one: #d4fbc4;
+  --color-step-five: #ecc5bf; */
+:root {
+  --rad: 0.7rem;
+  --dur: 0.3s;
+  --color-dark: #2f2f2f;
+  --color-white: #fff;
+  --color-grey: lightgrey;
+  --color-step-one: #65EAD4;
+  --color-step-two: #53D3BA;
+  --color-step-five: #F06A6E;
+  --fontsize-header: 2em;
+  --fontsize-sub: 1.3em;
+  --fontsize-input: 14px;
+  --fontsize-mega: 80px;
+  --font-family: "Poppins", "helvetica", sans-serif;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi: 600;
+  --font-bold: 800;
+  --font-black: 900;
+}
+
+/* ^ global stuff ^ */
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: row;
+}
+a {
+  color: var(--color-dark);
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: url(http://www.transparenttextures.com/patterns/otis-redding.png);
+  background-color: var(--color-dark);
+  padding-right: 10%;
+  font: var(--font-fam);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  width: 80%;
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+.content-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.content h2 {
+  color: var(--color-step-two);
+  font-size: var(--fontsize-mega);
+  font-weight: var(--font-black);
+  line-height: 96%;
+  margin-bottom: 20px;
+}
+.content h3 {
+  color: var(--color-step-two);
+  font-size: var(--fontsize-sub);
+  font-weight: var(--font-bold);
+}
+.content p {
+  color:var(--color-step-two);
+  width: 66%;
+  font-size: var(--fontsize-sub);
+}
+#toggle {
+ font-size: var(--fontsize-header);
+  color: var(var(--color-step-two));
+  animation: bounce 1.5s infinite;
+  margin-left: 50px;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(-25px);
+  }
+}
+.fa-times {
+  font-size: var(--fontsize-header);
+  color: var(--color-step-two);
+}
+.content-side {
+  position: fixed;
+  right: 0;
+  display: none;
+  width: 20%;
+  height: 100%;
+  padding-top: 90px;
+  font-family: var(--font-family);
+  background-color: #F2F2F2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]; */
+
+.content-side nav {
+  height: 80px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.content-side nav i {
+  color: var(--color-dark);
+  font-size: 2.5em;
+}
+.content-side aside {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+
+.DK-TALKIES™-1-hex { color: #010440; }
+.DK-TALKIES™-2-hex { color: #D7F205; }
+.DK-TALKIES™-3-hex { color: #CAD95B; }
+.DK-TALKIES™-4-hex { color: #D9B391; }
+.DK-TALKIES™-5-hex { color: #BFB3A8; }
+
+
+.button-64 {
+  align-items: center;
+  background-image: linear-gradient(to right bottom, #65EAD4, #53D3BA, #f05053); 
+  border: 0;
+  border-radius: 8px;
+  box-shadow: lightgrey 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: var(--font-family);
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.button-64:active,
+.button-64:hover {
+  outline: 0;
+}
+
+.button-64 span {
+  background-color: var(--color-dark);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-64:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button-64 {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+.close {
+  border-style: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.close:hover{
+  color: var(--color-step-five);
+}
